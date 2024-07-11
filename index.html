@@ -17,13 +17,6 @@
 <body>
     <div id="map"></div>
     <script>
-        const locations = [
-                { place: "한화생명 이글스파크", lat: 36.3172, lng: 127.4292 },
-                { place: "수제왕돈까스", lat: 36.318122, lng: 127.429329 },
-                { place: "은영네한우내장탕", lat: 36.319486, lng: 127.432598 },
-                { place: "별뜨는집", lat: 36.3188889, lng: 127.4291667 },
-                ...
-        ];
         function initMap() {
             var location = { lat: 126.852, lng: 31.160 }; // 원하는 좌표로 변경
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -34,13 +27,6 @@
                 position: location,
                 map: map
             });
-
-            for (var i = 0; i < locations.length; i++) {
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: new google.maps.LatLng(locations[i].lat, locations[i].lng)
-                });
-            }
         }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVNoJ0qURFOkM705Gwx4yGtBFifSmWXVY&callback=initMap"></script>
