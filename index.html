@@ -21,23 +21,45 @@
         function initMap() {
             var location =  { lat: 35.1463981320399, lng: 126.91881959390015};
             var location1 = { lat: 35.1479225746870, lng: 126.91884117658508};
+            var location2 = { lat: 35.145527611172135, lng: 126.92187743715382};
+            var location3 = { lat: 35.14490386586917, lng: 126.9194788895439};
 
             var image1 = {
             url: encodeURIComponent('/images/TestImg1.png'),
             scaledSize: new google.maps.Size(50, 50)
             };
+
+            var image2 = {
+            url: encodeURIComponent('/images/TestImg2.png'),
+            scaledSize: new google.maps.Size(50, 50)
+            };
+
+            var image3 = {
+            url: encodeURIComponent('/images/TestImg3.png'),
+            scaledSize: new google.maps.Size(50, 50)
+            };
+            
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 16,
                 center: location
             });
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map
-            });
+            
             var marker1 = new google.maps.Marker({
                 position: location1,
                 map: map,
                 icon: image1
+            });
+            
+            var marker1 = new google.maps.Marker({
+                position: location1,
+                map: map,
+                icon: image2
+            });
+            
+              var marker1 = new google.maps.Marker({
+                position: location1,
+                map: map,
+                icon: image3
             });
         }
         
